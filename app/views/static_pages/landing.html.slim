@@ -1,0 +1,37 @@
+.hero-image.hero-image-1
+  .container
+    .row
+      .hero-text 
+        span.headline Where the community comes to play
+= render "locations/strip", locations: @locations
+.white-row 
+  .container
+    .row.vcenter
+      .col-md-12
+        h5 tell me more about this co-working thing
+.beige-row
+  .container    
+    .row
+      .col-md-8
+        span.headline-text "Events are the epicentre of innovation"
+      .col-md-2
+        button.btn.btn-lg.btn-primary.btn-block Host an Event
+.beige-row
+  .container
+    .row
+      .col-md-8
+        span.headline-text "The energy is inspiring in a co-working space"
+      .col-md-2
+        = link_to "Be a member", join_us_path, class: "button btn btn-lg btn-primary btn-block"
+.location-row-bg
+  .container
+    .row
+      .col-md-12
+        h3 Our founding members
+    .row
+      .col-md-4
+        = render "static_pages/founders/founder_1"
+      .col-md-4
+        = render "static_pages/founders/founder_2"
+      .col-md-4
+        = render "static_pages/founders/founder_3"

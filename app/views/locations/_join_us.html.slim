@@ -1,0 +1,10 @@
+.col-sm-6.col-md-4
+  .thumbnail
+    h5 = location.name
+    = link_to image_tag(location.image), location_path(location.id)
+    .caption
+      - location.pricings.each do |pricing|
+        p
+          = pricing.name
+      = link_to "View Selection", join_us_path, class: "button btn btn-lg btn-primary btn-block"
+

@@ -1,0 +1,23 @@
+staging:
+  stack: cedar
+  app: theco-staging
+  addons:
+    - heroku-postgresql:dev
+    - scheduler:standard
+  config:
+    RAILS_ENV: staging
+    RACK_ENV: staging
+    APP_NAME: theco-staging
+
+production:
+  stack: cedar
+  app: theco-production
+  addons:
+    - heroku-postgresql:basic
+    - scheduler:standard
+    - sendgrid:bronze
+    - sentry:developer
+    - newrelic:standard
+  config:
+    APP_NAME: theco-production
+  tag: staging/*

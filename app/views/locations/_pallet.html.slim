@@ -1,0 +1,13 @@
+.location-index
+  .col-md-12
+    h2 #{location_el.name}
+  .col-md-4
+    = image_tag location_el.image, class:"location-index-img"
+  .col-md-6.padding-left
+    .description #{location_el.description.html_safe}
+    .vcenter
+      .service-tiles
+        - location_el.services.each do |el|
+          = render "services/tile_index", service_el: el
+      .service-cta
+        = link_to "View", location_path(location_el.id), class: "btn btn-primary btn-lg btn-block"

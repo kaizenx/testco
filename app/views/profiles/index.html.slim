@@ -1,0 +1,22 @@
+.hero-image.hero-image-1
+  .container
+    .row
+      .hero-text 
+        span.headline The need to grow
+        span.headline.headline-underline with Mentors
+        span.subheader Host events in multiple places, or one
+.beige-row
+  .container
+    .row
+      h3 List of Mentors in All Spaces
+      p.sub-header The Co is dedicated to exposing both their members and event attendees to leaders in the design, tech and entrepreneurial spheres.
+      - @profiles.each do |profile|
+        = render "profiles/tile_image_only", profile: profile
+.beige-row
+  .container    
+    .row
+      .col-md-8
+        span.headline-text "The energy is inspiring in a coworking space"
+      .col-md-2
+        button.btn.btn-lg.btn-primary.btn-block Be a member
+= render "locations/strip", locations: @locations 

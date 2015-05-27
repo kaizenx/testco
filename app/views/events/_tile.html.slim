@@ -1,0 +1,10 @@
+.col-md-3
+  .event-tile-container
+    = image_tag event_el.image, class: "event-tile-img"
+    .event-tile-text 
+      h4
+        div #{event_el.title} 
+        div.tile-date #{event_el.date}
+        div.tile-time 
+        div #{event_el.location.name} x
+        div #{event_el.description.html_safe}

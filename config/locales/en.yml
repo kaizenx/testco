@@ -1,0 +1,39 @@
+en:
+  hello: "Hello world"
+  location:
+    create:
+      success: "Successfully created location."
+      failure: "Fail to create location."
+    update:
+      success: "Successfully updated location."
+      failure: "Fail to update location."
+    destroy:
+      success: "Successfully deleted location."
+  user:
+    create:
+      success: "Successfully created user."
+      failure: "Fail to create user."
+    update:
+      success: "Successfully updated user."
+      failure: "Fail to update user."
+    destroy:
+      success: "Successfully deleted user."
+  news:
+    create:
+      success: "Successfully created news."
+      failure: "Fail to create news."
+    update:
+      success: "Successfully updated news."
+      failure: "Fail to update news."
+    destroy:
+      success: "Successfully deleted news."
+  event:
+    create:
+      success: "Successfully created event."
+      failure: "Fail to create event."
+    update:
+      success: "Successfully updated event."
+      failure: "Fail to update event."
+    destroy:
+      success: "Successfully deleted event."
+

@@ -1,0 +1,22 @@
+= content_for :nav
+  = render "nav"
+.container
+  .text-center
+    = link_to image_tag("theco-logo.png"), root_path
+    div data-role="page" 
+      .ui-content.pad-foot.form-signin.jumbotron role="main" 
+        .row-head.col-offset-1.col-inset-1
+          h2 Sign in
+        .row.col-offset-1.col-inset-1
+          .col-para
+            = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              .form-group
+                input#email.form-control name="user[email]" placeholder=("Enter email") type="email" required="true" autofocus="true"
+              .form-group
+                input#password.form-control name="user[password]" placeholder="Password" type="password" required="true"
+
+                = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+              .form-actions
+                = f.button :submit, "Sign in"
+= content_for :footer
+  = render "footer"

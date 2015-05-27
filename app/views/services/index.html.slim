@@ -1,0 +1,20 @@
+= content_for :nav
+  = render "nav"
+.hero-image.hero-image-3
+  .container
+    .row
+      .hero-text 
+        span.headline Where the community comes to play
+.beige-row
+  .container
+    .row
+      h3 Facilities
+      - @services.each do |el|
+            = render "services/tile_name", service_el: el
+    .row.padding-bottom
+      h3 Type of seats
+      - @areas.each do |el|
+        = render "areas/tile_2", area_el: el
+= render "locations/strip", locations: @locations
+    
+          

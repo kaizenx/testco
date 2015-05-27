@@ -1,0 +1,7 @@
+.location-row-bg
+  .container
+    .row
+      .vcenter
+        - locations.each do |el|
+          = render "locations/tile", location: el
+        = render "locations/empty_tile"

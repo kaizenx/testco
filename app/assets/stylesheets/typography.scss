@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'FuturaStd-Bold';
+  src: font-url('FuturaStdBold.otf');
+}
+@font-face {
+  font-family: 'FuturaStd-Medium';
+  src: font-url('FuturaStdMedium.otf');
+}
+body {
+  font-family: FuturaStd-Medium;
+  font-size: 1.4rem;
+}

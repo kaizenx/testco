@@ -1,0 +1,23 @@
+= content_for :nav
+  = render "nav"
+.hero-image.hero-image-2
+  .container
+    .row
+      .hero-text 
+        span.headline Where the 
+        span.headline community
+        span.headline.headline-underline comes to play
+.beige-row
+  .container
+    .row
+      h3 Upcoming events in all locations this week
+.beige-row
+  .container
+    .row
+      .col-md-8
+        h1 Event list
+        = render "events/list", events: @events
+      .col-md-4
+        h3 We've got the space for you!
+        = link_to "Host an Event", root_path, class: 'btn btn-primary btn-lg btn-block'
+        #calendar

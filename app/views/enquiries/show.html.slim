@@ -1,0 +1,47 @@
+= content_for :nav
+  = render "enquiries/city_nav"
+.hero-image.hero-image-3
+  .hero-content
+    h1 = @location.name
+    h1 Prices start from #{@location.pricings.order(price: :desc).first.price}
+.container
+  .row
+    .col-md-6
+      = @location.address
+    .col-md-2
+      = @location.phone
+    .col-md-2
+      button.btn.btn-lg.btn-primary Host an Event
+    .col-md-2
+      button.btn.btn-lg.btn-primary Get a seat
+  .row
+    .col-md-4
+      h1 Facilities
+    .col-md-8
+      - @location.services.all.each do |el|
+        .col-service
+          = image_tag el.image, class: 'roundel-sml v-inset-1'
+  .row
+    h1 Areas
+    - @location.areas.all.each do |el|
+      = render "areas/tile", area: el
+  .row 
+    h1 Events
+    - @events.each do |el|
+      = render "events/tile", area: el
+  .row
+    h1 Our location
+    h1 SHOW MAP HERE
+  .row
+    h1 We've got seats!
+    - @pricings_top.each do |el|
+      = render "pricings/tile", pricing: el
+    - @pricings_bottom.each do |el|
+      = render "pricings/pallet", pricing: el
+  .row
+    .text-center
+      h1 Need a custom setup, enquire!
+  .row
+    - @locations.each do |el|
+      = render "locations/tile", location: el
+          

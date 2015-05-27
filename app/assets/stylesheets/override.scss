@@ -1,0 +1,55 @@
+h3{
+  font-family: "FuturaStd-Bold";
+}
+
+h4{
+  font-family: "FuturaStd-Bold";
+}
+
+.container{
+  max-width:970px;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+.navbar-brand{
+  padding-top: 30px;
+}
+
+.navbar-right{
+  padding-top: 75px;
+  font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+  .collapsing, .in {background-color: #000;}
+  .collapsing ul li a, .in ul li a {color: #555!important;}
+  .collapsing ul li a:hover, .in ul li a:hover {color: #f1f1f1!important;}
+  .navbar-brand img{
+    max-height: 50px;
+  }
+  .navbar-brand{
+    padding-top:0px;
+  }
+}

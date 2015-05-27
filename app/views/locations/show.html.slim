@@ -1,0 +1,64 @@
+= content_for :nav
+  = render "nav"
+.hero-image.hero-image-2
+  .container
+    .row
+      .hero-text 
+        span.headline #{@location.name}
+        span.headline.headline-underline #{@location.city.name}
+        span.subheader a seat starts from #{@starter_pricing}
+.white-row 
+  .container
+    .row.vcenter
+      .col-md-5
+        h4 
+          strong = @location.address.html_safe
+        = @location.map_description
+      .col-md-2
+        h4 
+          strong = @location.phone
+      .col-md-2
+        button.btn.btn-lg.btn-primary Host an Event
+      .col-md-2
+        button.btn.btn-lg.btn-primary Get a seat
+.beige-row
+  .container
+    .row.padding-bottom
+      .col-md-4
+        h3 Facilities
+      .col-md-8
+        .pull-right
+          - @services.each do |el|
+              = render "services/tile", service_el: el
+    .row.padding-bottom
+      - @areas.each do |el|
+        = render "areas/tile", area_el: el
+    .row.padding-bottom
+      h3 Events
+      .vcenter
+        - @events.each do |el|
+          = render "events/tile", event_el: el
+        = render "events/empty_tile"
+
+.beige-row
+  .container
+    h3.gray-text Our location
+.row.padding-bottom style="background-image:url('#{@location.image}'); height: 415px;"
+
+  / = link_to image_tag(@location.image), @location.google_map_link
+.beige-row
+  .container
+    h3.gray-text We've got seats!
+    .row
+      - @pricings_top.each do |el|
+        = render "pricings/tile", pricing: el
+.beige-row
+  .container
+    .row
+    - @pricings_bottom.each do |el|
+      = render "pricings/pallet", pricing: el
+  .row
+    .text-center
+      h4.gray-text Need a custom setup, enquire!
+= render "locations/strip", locations: @locations
+          

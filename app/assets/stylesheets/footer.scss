@@ -1,0 +1,17 @@
+.footer-bg{
+  padding-top: 100px;
+  color: #fff;
+  background-color:#000;
+}
+.footer-links{
+  display:block;
+}
+.footer-links a{
+  color: #fff;
+  display:block;
+}
+.footer-links a:hover{
+  color: $brand-primary;
+  text-decoration: none;
+  display:block;
+}

@@ -1,0 +1,4 @@
+- if content_for? :nav
+  = yield :nav
+- else
+  = render "shared/main_nav"

@@ -1,0 +1,14 @@
+.col-md-6.remove-left-padding
+  .profile
+    .media
+      .media-left
+        = image_tag profile.image, class: "round-portrait"
+      .media-body
+        .content
+          = profile.blurb
+          .designation-row
+            span #{profile.name}, #{profile.title}
+          .social-media-row
+            =link_to '<i class="fa fa-facebook-official fa-lg link-color"></i>'.html_safe, profile.facebook, class:"padding-right"
+            =link_to '<i class="fa fa-instagram fa-lg link-color"></i>'.html_safe, profile.instagram, class:"padding-right"
+            =link_to '<i class="fa fa-twitter fa-lg link-color"></i>'.html_safe, profile.twitter, class:"padding-right"

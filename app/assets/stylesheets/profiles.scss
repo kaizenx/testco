@@ -1,0 +1,50 @@
+.remove-left-padding{
+  padding-left:0px;
+}
+.round-portrait{
+  border-radius: 50%;
+  width: 150px;
+  float: none;
+  margin: auto;
+  text-align: center;
+}
+.profile{
+  padding-bottom: 16px;
+  .media{
+    .media-left{
+      padding:0px;
+    }
+    .media-body{
+      vertical-align: middle;
+      .content{
+        padding-left: 16px;
+        .designation-row{
+          font-family: FuturaStd-Bold;
+        }
+        .social-media-row{
+          .padding-right{
+            padding-right: 5px;
+          }
+          .link-color{
+            color:#000;
+          }
+          .link-color:hover{
+            color: $brand-primary;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .profile{
+    .media{
+      .media-body{
+        padding-top: 0px;
+        padding-left: 16px;
+      }
+    }
+  }
+}

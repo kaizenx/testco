@@ -1,0 +1,30 @@
+= content_for :nav
+  = render "nav"
+.hero-image.hero-image-3
+  .container
+    .row
+      .hero-text 
+        span.headline This is the page where you enquire
+.beige-row
+  .container
+    .row
+      h3 Community
+      p.sub-header = Faker::Lorem.paragraph(2)
+      - @community_members.each do |profile|
+        = render "profiles/tile", profile: profile
+.beige-row
+  .container
+    .row
+      h3 Partners
+      p.sub-header = Faker::Lorem.paragraph(2)
+      - @partners.each do |profile|
+        = render "profiles/tile_blurb_only", profile: profile
+.beige-row
+  .container
+    .row
+      h3 The Team
+      p.sub-header = Faker::Lorem.paragraph(2)
+      - @team_members.each do |profile|
+        = render "profiles/tile_image_only", profile: profile
+    
+          

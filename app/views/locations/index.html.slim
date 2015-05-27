@@ -1,0 +1,16 @@
+= content_for :nav
+  = render "nav"
+.hero-image.hero-image-2
+  .container
+    .row
+      .hero-text 
+        span.headline #{City.all.size} countries
+        span.headline.headline-underline #{Location.all.size} locations
+        span.subheader In the heart of it all
+.beige-row
+  .container
+    .row.padding-bottom
+      .col-md-12
+        - @locations.each do |el|
+            = render "locations/pallet", location_el: el
+        = render "locations/empty_pallet"

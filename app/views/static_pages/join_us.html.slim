@@ -1,0 +1,19 @@
+.hero-image.hero-image-1
+  .container
+    .row
+      .hero-text 
+        span.headline Our selection
+        span.headline.headline-underline of work spaces
+        span.subheader a network of work spaces
+.beige-row
+  .container    
+    .row
+      -@locations.each do |location|
+        = render "locations/join_us", location: location
+.beige-row
+  .row
+    .text-center
+      h4.gray-text Need a custom setup, enquire!
+
+
+

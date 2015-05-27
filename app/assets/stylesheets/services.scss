@@ -1,0 +1,20 @@
+.service-name{
+  display: inline-block;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
+  .icon{
+    float: left;
+  }
+  .text{
+    float: left;
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+    div{
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 10px;
+    }
+  }
+}
